@@ -1,0 +1,37 @@
+# this contains the labeler configuration
+
+# for any PR where fix, feature or breaking is in the start of the branch name, add the corresponding labels
+
+fix:
+  - head-branch: ["^fix"]
+
+feature:
+  - head-branch: ["^feature"]
+
+breaking:
+  - head-branch: ["^breaking"]
+
+# Add 'terraform' label to any PR that has a path that contains '.tf', '.tfvars' or '.hcl'
+
+terraform:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.tf"
+          - "**/*.tfvars"
+          - "**/*.hcl"
+
+# Add 'yaml' label to any PR that has a path that contains '.yaml' or '.yml'
+
+yaml:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.yaml"
+          - "**/*.yml"
+
+# Add 'documentation' label to any PR that has a path that contains '.md' or '.txt'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "**/*.txt"
