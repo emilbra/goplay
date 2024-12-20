@@ -1,0 +1,16 @@
+name: Run Release Please on push to main
+run-name: ${{ github.actor }} has pushed to main, kicking off Release Please 🤖
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release-please
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_PAT }}
+          release-type: "python"
