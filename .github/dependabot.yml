@@ -5,9 +5,7 @@
 
 version: 2
 updates:
-  # MAKE SURE TO UPDATE THIS TO BE THE CORRECT PACKAGE ECOSYSTEM, referencing https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem
-  # as it is now, it will fail because it is not a valid package ecosystem, if you use this for terraform, it will work
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-      interval: ""
+      interval: "weekly"
