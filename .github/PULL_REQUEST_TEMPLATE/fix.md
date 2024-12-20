@@ -6,7 +6,7 @@
      Please adhere to these best practices when creating a PR:
      - Use sensible commit messages adhering to conventional commits
      - Keep the scope and amount of changes in PR as small as possible
-     - Describe how you have tested the change, and how this can be tested after the change.
+     - Describe how you have tested, and how it be tested after merge.
 
      Thanks to Forem for insperation for this template: https://github.com/forem/forem/blob/main/.github/PULL_REQUEST_TEMPLATE.md?plain=1
 -->
@@ -15,15 +15,15 @@
 
 ## Description
 
-_Insert clear and relevant description to help reviewers understand the intention of the PR._
+Insert clear and relevant description about the intention of the PR
 
 ## How to test and verify
 
-_If applicable, how to test the changes implemented by this PR._
+If applicable, how to test the changes implemented by this PR.
 
 ## [Optional] Are there any post deployment task we need to perform?
 
-_For example, do we need to do some manual steps?_
+For example, do we need to do some manual steps?
 
 <!--
   This next portion is used by the reviewer
@@ -33,7 +33,8 @@ _For example, do we need to do some manual steps?_
 
 - [ ] Title of PR is relevant and descriptional.
 - [ ] Code changes are relevant and clear.
-- [ ] Pull Request description contains relevant information that matches the scope of the pull request.
+- [ ] Pull Request description contains relevant information.
+
 <!--
 // jscpd:ignore-end
 -->
