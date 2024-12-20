@@ -5,9 +5,26 @@ on:
 jobs:
   # Let us add a label to the PR based on the branch name and files changed
   labeler:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v5
+
+  linting:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v7.2.1
+        env:
+          # This is a token that is automatcially genereated by GitHub Actions and lasts until the job is complete
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_KUBERNETES_KUBECONFORM: ${{ inputs.enable_kubeconform }}
+          VALIDATE_NATURAL_LANGUAGE: ${{ inputs.enable_natural_language }}
