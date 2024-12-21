@@ -30,5 +30,3 @@ jobs:
         env:
           # This is a token that is automatcially genereated by GitHub Actions and lasts until the job is complete
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_KUBERNETES_KUBECONFORM: ${{ inputs.enable_kubeconform }}
-          VALIDATE_NATURAL_LANGUAGE: ${{ inputs.enable_natural_language }}
