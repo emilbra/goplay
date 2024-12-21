@@ -15,4 +15,4 @@ jobs:
         id: release-please
         with:
           token: ${{ secrets.RELEASE_PLEASE_PAT }}
-          release-type: "python"
+          release-type: "go"
